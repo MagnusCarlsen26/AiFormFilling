@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+beautifulsoup4
+google-generativeai
+python-dotenv
+
