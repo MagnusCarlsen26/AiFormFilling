@@ -1,16 +1,18 @@
 import { SERVER_URL } from '../constants/serverUrl'
+import { userInfo } from "../constants/userInfo"
 
-export function sendFormHTML() {
+export async function sendFormHTML() {
   
-  fetch(`${SERVER_URL}/getFormHTML`, {
+  return fetch(`${SERVER_URL}/getFormHTML`, {
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      formHTML: document.querySelector('form').innerHTML
+      formHTML: document.querySelector('form').innerHTML,
+      userInfo: userInfo 
     }),
     method: 'POST'
-  }).then( async(res) => console.log(await res.text()) )
+  }).then( async(res) => (await res.json()) )
   .catch(err => console.error("ERROR SENDING FORM HTML"))
 
 }

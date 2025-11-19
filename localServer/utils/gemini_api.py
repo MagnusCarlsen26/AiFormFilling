@@ -16,11 +16,11 @@ def send_gemini_message(
     history: list = None,
     model: str = 'gemini-2.0-flash',
 ):
-    model_instance = google.generativeai.GenerativeModel(model)
-
+    model_instance = google.generativeai.GenerativeModel(
+        model,
+        system_instruction=sys_prompt
+    )
     chat_args = {}
-    chat_args['system_instruction'] = sys_prompt
-
     convo = model_instance.start_chat(**chat_args)
 
     convo.send_message(message)

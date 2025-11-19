@@ -7,7 +7,16 @@ import { sendFormHTML } from './apiService/sendFormHTML'
 
 console.log('Content  loaded.');
 
-sendFormHTML()
+sendFormHTML().then(geminiCommands => {
+  console.log(geminiCommands)
+  geminiCommands.forEach(command => {
+    console.log(command)
+    inputTools(
+      command.handleType,
+      command
+    );
+  })
+});
 
 function inputTools(inputType, payload) {
   switch (inputType) {
