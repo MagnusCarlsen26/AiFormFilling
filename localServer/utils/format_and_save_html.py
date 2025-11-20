@@ -1,8 +1,11 @@
 from bs4 import BeautifulSoup
+from constants.htmlTagsToRemove import htmltagsToRemove 
 
 def formatHTML(html_content):
     try:
         soup = BeautifulSoup(html_content, "html.parser")
+
+        remove_certain_tags(soup)
 
         remove_unwanted_attributes(soup)
 
@@ -12,7 +15,13 @@ def formatHTML(html_content):
 
         return formatted_html
     except Exception as e:
-        print(f"Error formatting html at {file_path}: {e}")
+        print(f"Error formatting html: {e}")
+
+def remove_certain_tags(soup):
+    
+    for tag_name in htmltagsToRemove:
+        for tag in soup.find_all(tag_name):
+            tag.decompose()
 
 def remove_unwanted_attributes(soup):
     for tag in soup.find_all(True):
