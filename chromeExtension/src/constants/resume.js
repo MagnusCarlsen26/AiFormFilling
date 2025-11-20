@@ -12,7 +12,7 @@ Today's Date - ${TODAY_DATE}
 
 ## Basic info
 Name - Khushal Sindhav
-Role - Software Engineer / Full Stack Developer
+Applying for Role - Software Engineer / Full Stack Developer
 College - IIT Jodhpur, B.Tech AI & Data Science(2021 - 2025)
 
 ## Contact
@@ -40,11 +40,13 @@ DevOps - AWS, Firebase, Docker, Kubernetes,
 ## Work Experience
 Company Name - Oasis of Ideas
 Role - Full Time Software Engineer
+Location - Remote
 Duration - Jul 2025 – Oct 2025
 Link - https://www.linkedin.com/company/oasis-of-ideas
 Location - Remote
 Skills - Python, AWS EC2, tmux
-
+IMPORTANT - Current JOB
+Role Description :
 - Solely designed, implemented, and maintained an end - to - end system for scraping and processing startup ideas.
 - Scraped data from multiple websites using asynchronous Python programming.
 - Processed scraped content via multi - stage LLM pipelines powered by OpenAI, DeepSeek, and Gemini.
@@ -54,10 +56,11 @@ Skills - Python, AWS EC2, tmux
 Company Name - IIT Jodhpur
 Project Name - Survey Portal
 Role - Software Intern
+Location - Jodhpur
 Duration - Jul 2024 – Nov 2024
 Link - https://github.com/MagnusCarlsen26/Survey-portal
 Skills - NextJS, TailwindCSS, Vercel, NodeJS, Firebase, AWS EC2
-
+Role Description :
 - Developed a custom survey website to conduct surveys at IIT Jodhpur.
 - The website handled 270 users without any errors during the survey.
 - Designed a responsive UI and implemented security measures, such as preventing users from skipping responses to questions.
@@ -66,6 +69,7 @@ Skills - NextJS, TailwindCSS, Vercel, NodeJS, Firebase, AWS EC2
 ## Projects
 Company Name - IIT Jodhpur
 Project Name - PRACTO SCRAPER
+Location - Jodhpur
 Duration - Sept 2024 – Nov 2024
 Link - https://github.com/MagnusCarlsen26/Practo-Scraper
 Skills - Javascript, Docker, Kubernetes, Firebase, AWS EKS

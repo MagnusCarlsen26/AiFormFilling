@@ -7,7 +7,7 @@ import { sendFormHTML } from './apiService/sendFormHTML'
 
 console.log('Content.js  loaded.');
 
-chrome.runtime.onMessage.addListener(function(request) {
+chrome.runtime.onMessage.addListener(function (request) {
   if (request.action === "fillForm") {
     fillForm();
   }
@@ -27,7 +27,11 @@ function fillForm() {
 
 }
 
-function inputTools(inputType, payload) {
+function inputTools(
+  inputType,
+  payload,
+) {
+
   switch (inputType) {
     case 'text':
       handleText(payload);
@@ -41,6 +45,8 @@ function inputTools(inputType, payload) {
     case 'choice':
       handleChoice(payload);
       break;
+    case 'no input':
+      alert('AI find no input field to enter.');
     default:
       console.log('Unknown input type:', inputType);
   }
