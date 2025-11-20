@@ -1,11 +1,10 @@
-from ast import parse
 from flask import Flask
 from flask_cors import CORS
 from flask import request
 
-from utils.format_and_save_html import formatHTML 
 from utils.gemini_api import send_gemini_message
 from utils.parseGeminiCode import parseGeminiJSON
+from utils.logData import logData
 from constants.systemPrompt import SYSTEM_PROMPT
 
 app = Flask(__name__)
@@ -18,6 +17,7 @@ def getFormHTML():
     print("form html payload:")
     print(payload)
 
+    url = payload.get("url")
     form_html = payload.get("formHTML")
     userInfo = payload.get("userInfo")
     geminiResponse = send_gemini_message(
@@ -26,6 +26,8 @@ def getFormHTML():
         history=[],
         model='gemini-2.0-flash'
     )
+
+    logData(url, geminiResponse)
 
     return parseGeminiJSON(
         geminiResponse[0],
