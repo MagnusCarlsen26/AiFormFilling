@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Extension Settings</title>
+    <style>
+      body { font: 14px/1.4 system-ui, sans-serif; padding: 24px; max-width: 720px; }
+      label { display: block; margin: 12px 0 4px; }
+      input[type="text"], select { width: 100%; padding: 8px; }
+      .row { margin-bottom: 16px; }
+      .actions { margin-top: 24px; display: flex; gap: 12px; }
+      .msg { margin-top: 12px; color: seagreen; }
+    </style>
+  </head>
+  <body>
+    <h1>Settings</h1>
+
+    <div class="row">
+      <label for="apiKey">API key</label>
+      <input id="apiKey" type="text" placeholder="Enter API key" />
+    </div>
+
+    <div class="row">
+      <label for="theme">Theme</label>
+      <select id="theme">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>
+        <input id="enableFeatureX" type="checkbox" />
+        Enable feature X
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="save">Save</button>
+      <button id="reset">Reset to defaults</button>
+    </div>
+
+    <div id="msg" class="msg" role="status" aria-live="polite"></div>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>
