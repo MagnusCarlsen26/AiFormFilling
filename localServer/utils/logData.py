@@ -3,21 +3,23 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-import uuid
+def logData(
+    url, 
+    gemini_response, 
+    htmlContent, 
+    htmlFileName, 
+    logJsonPath='./logs/gemini_log.json', 
+    htmlDir='./logs/html'
+):
 
-def logData(url, gemini_response, html, logJsonPath='./logs/gemini_log.json', htmlDir='./logs/html'):
-    os.makedirs(htmlDir, exist_ok=True)
-    random_name = f"{uuid.uuid4().hex}.html"
-    html_path = os.path.join(htmlDir, random_name)
-    
-    with open(html_path, "w", encoding="utf-8") as html_file:
-        html_file.write(html if html is not None else "")
+    with open(f"{htmlDir}/{htmlFileName}", "w", encoding="utf-8") as html_file:
+        html_file.write(htmlContent)
 
     log_entry = {
         "timestamp": datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%b-%d %H:%M"),
         "url": url,
         "gemini_response": gemini_response[0],
-        "html_file": random_name
+        "html_file": htmlFileName
     }
     logs = []
     if os.path.exists(logJsonPath):
