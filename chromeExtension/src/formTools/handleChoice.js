@@ -6,5 +6,5 @@ export function handleChoice({
 
   group.click()
 
-  target.dispatchEvent(new Event('input', { bubbles: true }));
+  group.dispatchEvent(new Event('input', { bubbles: true }));
 }
