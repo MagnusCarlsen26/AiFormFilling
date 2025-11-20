@@ -5,9 +5,13 @@ import { handleText } from './formTools/handleText'
 
 import { sendFormHTML } from './apiService/sendFormHTML'
 
-console.log('Content  loaded.');
+console.log('Content.js  loaded.');
 
-fillForm()
+chrome.runtime.onMessage.addListener(function(request) {
+  if (request.action === "fillForm") {
+    fillForm();
+  }
+});
 
 function fillForm() {
   sendFormHTML().then(geminiCommands => {
