@@ -3,6 +3,7 @@ from flask_cors import CORS
 from flask import request
 
 from utils.gemini_api import send_gemini_message
+from utils.format_and_save_html import saveHTML
 from utils.parseGeminiCode import parseGeminiJSON
 from utils.logData import logData
 from constants.systemPrompt import SYSTEM_PROMPT
@@ -20,6 +21,12 @@ def getFormHTML():
     url = payload.get("url")
     form_html = payload.get("formHTML")
     userInfo = payload.get("userInfo")
+
+    saveHTML(
+        "./logs/lastPage.html",
+        formatted_html=form_html
+    )
+
     geminiResponse = send_gemini_message(
         message=f"userInfo: {userInfo} \n {form_html}",
         sys_prompt=SYSTEM_PROMPT,
@@ -27,7 +34,7 @@ def getFormHTML():
         model='gemini-2.0-flash'
     )
 
-    logData(url, geminiResponse)
+    logData(url, geminiResponse, form_html)
 
     return parseGeminiJSON(
         geminiResponse[0],
