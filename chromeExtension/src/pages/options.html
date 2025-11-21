@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Extension Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #282c34; /* Dark background */
+        color: #abb2bf; /* Light text color */
+        padding: 0; /* Remove padding from body */
+        margin: 0;
+        min-height: 100vh;
+        font-size: 16px; /* Increased base font size */
+      }
+
+      .container {
+        background-color: #3a3f4b; /* Slightly lighter container background */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 35px; /* Increased padding */
+        max-width: 100%; /* Ensure container takes full width */
+        width: 100%;
+        margin: 0; /* Removed margin to prevent body background from showing */
+        box-sizing: border-box;
+      }
+
+      .content-constrained {
+        max-width: 900px; /* Max width for constrained elements */
+        width: 100%;
+        margin: 30px auto; /* Center constrained content and add vertical margin */
+        background-color: #3a3f4b;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 35px;
+        box-sizing: border-box;
+      }
+
+      .content-full-width {
+        width: 100%;
+        margin-top: 20px; /* Spacing between sections */
+        margin-bottom: 20px;
+        padding: 0 20px; /* Add horizontal padding to full-width section */
+        box-sizing: border-box;
+      }
+
+      .unsaved-indicator {
+        color: #e6db74; /* A yellowish color for the asterisk */
+        margin-left: 5px;
+        visibility: hidden; /* Hidden by default */
+      }
+
+      h1 {
+        color: #61afef; /* Highlight color for headings */
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 2em;
+      }
+
+      .three-column-grid-wrapper {
+        width: 100%;
+        padding: 0; /* Removed padding from here as container handles it */
+        box-sizing: border-box;
+        margin-top: 30px; /* Space above the text areas */
+        margin-bottom: 30px; /* Space below the text areas */
+      }
+
+      label {
+        display: block;
+        margin: 15px 0 8px;
+        color: #c6c6c6;
+        font-weight: 400;
+      }
+
+      input[type="checkbox"] {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #61afef; /* Border color for checkboxes */
+        border-radius: 3px;
+        background-color: #4b5263;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+
+      input[type="checkbox"]:checked {
+        background-color: #61afef;
+        border-color: #61afef;
+      }
+
+      input[type="checkbox"]:checked::after {
+        content: '\2713'; /* Checkmark symbol */
+        color: #282c34;
+        font-size: 14px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      input[type="checkbox"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.3);
+      }
+
+      label.checkbox-label {
+        display: flex;
+        align-items: center;
+        margin: 0; /* Override default label margin */
+      }
+
+      input[type="text"], textarea {
+        width: calc(100% - 16px); /* Account for padding */
+        padding: 10px;
+        border: 1px solid #5c6370;
+        border-radius: 4px;
+        background-color: #4b5263;
+        color: #abb2bf;
+        font-size: 1em;
+        box-sizing: border-box; /* Include padding in width calculation */
+      }
+
+      input[type="text"]:focus, textarea:focus {
+        outline: none;
+        border-color: #61afef;
+        box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.3);
+      }
+
+      .row {
+        margin-bottom: 20px;
+      }
+
+      .checkbox-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .api-key-and-autofill-grid {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr; /* Adjusted ratio for API key and checkboxes */
+        gap: 30px;
+        margin-bottom: 30px;
+        align-items: center; /* Vertically center items */
+      }
+
+      .three-column-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+        padding-top: 20px; /* Add padding to visually separate from top section */
+        border-top: 1px solid #5c6370; /* Add a subtle top border */
+      }
+
+      .three-column-grid .row label {
+        text-align: center;
+        width: 100%;
+      }
+
+      .actions {
+        margin-top: 40px;
+        display: flex;
+        gap: 15px;
+      }
+
+      button {
+        background-color: #61afef; /* Primary button color */
+        color: #282c34;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        font-weight: 700;
+      }
+
+      button:hover {
+        background-color: #52a8e7;
+      }
+
+      button#reset {
+        background-color: #e06c75; /* Danger color for reset */
+      }
+
+      button#reset:hover {
+        background-color: #d15a63;
+      }
+
+      .msg {
+        margin-top: 20px;
+        color: #98c379; /* Success message color */
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-constrained">
+        <div class="api-key-and-autofill-grid">
+          <div>
+            <h1>
+              Gemini API key : <span id="apiKeyUnsavedIndicator" class="unsaved-indicator">*</span>
+            </h1>
+            <div class="row">
+              <input id="apiKey" type="text" placeholder="Enter API key" />
+              <button id="validateApiKey" style="margin-top: 10px;">Validate API Key</button>
+              <div id="apiKeyValidationMsg" class="msg" role="status" aria-live="polite"></div>
+              <div id="persistentApiKeyValidationMsg" class="msg" role="status" aria-live="polite" style="margin-top: 5px;"></div>
+            </div>
+          </div>
+
+          <div class="checkbox-grid">
+            <div class="row">
+              <label class="checkbox-label">
+                <input id="enableTextAutofill" type="checkbox" />
+                Enable Text Autofill
+                <span id="enableTextAutofillUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="checkbox-label">
+                <input id="enableDropdownAutofill" type="checkbox" disabled />
+                Enable Dropdown Autofill (Coming Soon)
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="checkbox-label">
+                <input id="enableChoiceAutofill" type="checkbox" />
+                Enable Choice Autofill
+                <span id="enableChoiceAutofillUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="checkbox-label">
+                <input id="enableFileUpload" type="checkbox" disabled />
+                Enable File Upload (Coming Soon)
+              </label>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="three-column-grid-wrapper">
+        <div class="content-full-width">
+          <div class="three-column-grid">
+            <div class="row">
+              <label for="resumeTextarea">
+                Resume <span id="resumeTextareaUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
+              <!-- TODO: Add recommended format for resume here -->
+              <textarea id="resumeTextarea" rows="10"></textarea>
+            </div>
+
+            <div class="row">
+              <label for="coverLetterTextarea">
+                Cover Letter <span id="coverLetterTextareaUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
+              <textarea id="coverLetterTextarea" rows="10"></textarea>
+            </div>
+
+            <div class="row">
+              <label for="faqTextarea">
+                FAQ <span id="faqTextareaUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
+              <textarea id="faqTextarea" rows="10"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-constrained">
+        <div class="actions">
+          <button id="save">Save</button>
+          
+        </div>
+
+        <div id="msg" class="msg" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>
