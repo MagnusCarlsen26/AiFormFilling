@@ -199,6 +199,8 @@
             <h1>Gemini API key :</h1>
             <div class="row">
               <input id="apiKey" type="text" placeholder="Enter API key" />
+              <button id="validateApiKey" style="margin-top: 10px;">Validate API Key</button>
+              <div id="apiKeyValidationMsg" class="msg" role="status" aria-live="polite"></div>
             </div>
           </div>
 
@@ -259,7 +261,7 @@
       <div class="content-constrained">
         <div class="actions">
           <button id="save">Save</button>
-          <button id="reset">Reset to defaults</button>
+          
         </div>
 
         <div id="msg" class="msg" role="status" aria-live="polite"></div>
