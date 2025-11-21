@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flask import request
+import os
 
 from utils.gemini_api import send_gemini_message
 from utils.format_and_save_html import formatHTML, saveHTML
@@ -61,4 +62,7 @@ def home():
     return "Hello, this is your Flask server!"
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+
+    FLASK_ENV = os.getenv('FLASK_ENV', 'development')
+    DEBUG_MODE = FLASK_ENV == 'development'
+    app.run(debug=DEBUG_MODE, port=5000)

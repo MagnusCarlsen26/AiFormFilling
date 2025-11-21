@@ -1,0 +1,30 @@
+name: Deploy Server to Vercel
+
+on:
+  push:
+    branches:
+      - main
+      - stage
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        run: vercel deploy ./server --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Staging
+        if: github.ref == 'refs/heads/stage'
+        run: vercel deploy ./server --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          Vercel_GIT_COMMIT_REF: ${{ github.ref_name }}
