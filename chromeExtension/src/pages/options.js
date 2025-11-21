@@ -2,6 +2,7 @@ const $ = (id) => document.getElementById(id);
 const msg = $("msg");
 import { validateGeminiKey } from "../apiService/validateGeminiKey.js";
 const apiKeyValidationMsg = $("apiKeyValidationMsg");
+const persistentApiKeyValidationMsg = $("persistentApiKeyValidationMsg");
 
 const DEFAULTS = {
   apiKey: "",
@@ -10,6 +11,7 @@ const DEFAULTS = {
   resumeTextarea: "",
   coverLetterTextarea: "",
   faqTextarea: "",
+  isApiKeyValid: false,
 };
 
 function showMsg(text) {
@@ -26,24 +28,55 @@ async function load() {
   $("resumeTextarea").value = cfg.resumeTextarea;
   $("coverLetterTextarea").value = cfg.coverLetterTextarea;
   $("faqTextarea").value = cfg.faqTextarea;
+
+  // Display persistent API key validation message on load
+  if (cfg.apiKey && cfg.isApiKeyValid) {
+    persistentApiKeyValidationMsg.textContent = "API Key is valid (from last check).";
+    persistentApiKeyValidationMsg.style.color = "#98c379";
+  } else if (cfg.apiKey && !cfg.isApiKeyValid) {
+    persistentApiKeyValidationMsg.textContent = "API Key is invalid (from last check).";
+    persistentApiKeyValidationMsg.style.color = "#e06c75";
+  } else {
+    persistentApiKeyValidationMsg.textContent = "";
+  }
 }
 
 async function save() {
+  const apiKey = $("apiKey").value.trim();
+  let isApiKeyValid = DEFAULTS.isApiKeyValid;
+
+  if (apiKey) {
+    const result = await validateGeminiKey(apiKey);
+    isApiKeyValid = result.valid;
+  }
+
   const cfg = {
-    apiKey: $("apiKey").value.trim(),
+    apiKey: apiKey,
     enableTextAutofill: $("enableTextAutofill").checked,
     enableChoiceAutofill: $("enableChoiceAutofill").checked,
     resumeTextarea: $("resumeTextarea").value.trim(),
     coverLetterTextarea: $("coverLetterTextarea").value.trim(),
     faqTextarea: $("faqTextarea").value.trim(),
+    isApiKeyValid: isApiKeyValid,
   };
   await chrome.storage.sync.set(cfg);
-  // Optionally notify other parts of the extension
   chrome.runtime.sendMessage({ type: "config-updated", payload: cfg });
   showMsg("Saved");
+
+  // Update persistent message after saving and validating
+  if (cfg.apiKey && cfg.isApiKeyValid) {
+    persistentApiKeyValidationMsg.textContent = "API Key is valid (from last check).";
+    persistentApiKeyValidationMsg.style.color = "#98c379";
+  } else if (cfg.apiKey && !cfg.isApiKeyValid) {
+    persistentApiKeyValidationMsg.textContent = "API Key is invalid (from last check).";
+    persistentApiKeyValidationMsg.style.color = "#e06c75";
+  } else {
+    persistentApiKeyValidationMsg.textContent = "";
+  }
 }
 
 async function validateKey() {
+  persistentApiKeyValidationMsg.textContent = ""; // Clear persistent message when validating
   const apiKey = $("apiKey").value.trim();
   if (!apiKey) {
     apiKeyValidationMsg.textContent = "API Key cannot be empty.";
@@ -55,7 +88,9 @@ async function validateKey() {
   apiKeyValidationMsg.style.color = "#61afef";
 
   const result = await validateGeminiKey(apiKey);
-  if (result.valid) {
+  let isApiKeyValid = result.valid;
+
+  if (isApiKeyValid) {
     apiKeyValidationMsg.textContent = "API Key is valid!";
     apiKeyValidationMsg.style.color = "#98c379";
   } else {
@@ -63,7 +98,6 @@ async function validateKey() {
     apiKeyValidationMsg.style.color = "#e06c75";
   }
 }
-
 
 $("save").addEventListener("click", save);
 $("validateApiKey").addEventListener("click", validateKey);
