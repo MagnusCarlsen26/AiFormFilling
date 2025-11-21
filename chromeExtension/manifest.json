@@ -3,12 +3,7 @@
   "name": "AI Form Filling",
   "version": "1.0",
   "description": "An AI-powered form filling extension.",
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "storage"
-  ],
-  "options_page": "src/pages/options.html",
+  "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "src/popup.html"
   },
@@ -17,22 +12,14 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "src/content.js"
-      ]
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "src/**"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
+      "resources": ["src/**"],
+      "matches": ["<all_urls>"]
     }
   ]
 }

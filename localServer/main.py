@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask
 from flask_cors import CORS
 from flask import request
 
@@ -7,7 +7,6 @@ from utils.format_and_save_html import formatHTML, saveHTML
 from utils.parseGeminiCode import parseGeminiJSON
 from utils.logData import logData
 from constants.systemPrompt import SYSTEM_PROMPT
-import google.generativeai as genai
 
 app = Flask(__name__)
 CORS(app)
@@ -22,12 +21,11 @@ def getFormHTML():
     url = payload.get("url")
     form_html = formatHTML(payload.get("formHTML"))
     userInfo = payload.get("userInfo")
-    geminiApiKey = payload.get("geminiApiKey ")
 
     geminiResponse = send_gemini_message(
-        apiKey=geminiApiKey,
         message=f"userInfo: {userInfo} \n {form_html}",
         sys_prompt=SYSTEM_PROMPT,
+        history=[],
         model='gemini-2.5-flash'
     )
 
@@ -40,20 +38,6 @@ def getFormHTML():
     return parseGeminiJSON(
         geminiResponse[0],
     )
-
-@app.route("/validate-gemini-key", methods=["POST"])
-def validate_gemini_key():
-    payload = request.get_json()
-    gemini_api_key = payload.get("gemini_api_key")
-
-    try:
-        genai.configure(api_key=gemini_api_key)
-        # Attempt to list models to validate the API key
-        list(genai.list_models())
-        return jsonify({"valid": True})
-    except Exception as e:
-        print(f"Gemini API key validation failed: {e}")
-        return jsonify({"valid": False, "error": str(e)}), 400
 
 @app.route("/", methods=["GET"])
 def home():

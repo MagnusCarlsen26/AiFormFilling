@@ -12,18 +12,5 @@
 <body>
   <h1>AI Form Filling</h1>
   <button id="fillFormButton">Fill Form</button>
-  <a id="openSettingsLink" href="#" rel="noopener">Settings</a>
 </body>
-
-  <script type="module">
-    const id = chrome.runtime.id;
-    const url = `chrome-extension://${id}/src/pages/options.html`;
-    document
-      .getElementById("openSettingsLink")
-      .addEventListener("click", (e) => {
-        e.preventDefault();
-        chrome.tabs.create({ url });
-    });
-  </script>
-
 </html>

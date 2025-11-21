@@ -1,17 +1,21 @@
+from dotenv import load_dotenv
 import google.generativeai
+import os
+
+
+load_dotenv()
+
+google.generativeai.configure(
+    api_key=os.environ.get("GEMINI_API_KEY"),
+    transport="rest",
+)
 
 def send_gemini_message(
-    apiKey: str,
     message: str,
     sys_prompt: str,
+    history: list = None,
     model: str = 'gemini-2.0-flash',
 ):
-
-    google.generativeai.configure(
-        api_key=apiKey,
-        transport="rest"
-    )
-
     model_instance = google.generativeai.GenerativeModel(
         model,
         system_instruction=sys_prompt

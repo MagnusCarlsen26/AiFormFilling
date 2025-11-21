@@ -1,5 +1,3 @@
-import datetime
-
 OUTPUT_FORMAT = '''
 
 You should output an array of object where each object handles one input. The object describes the input field and what value should be there.
@@ -39,8 +37,6 @@ INVALID_HTML = '''
 '''
 
 SYSTEM_PROMPT = f'''
-
-{datetime.datetime.now().strftime("%B %d, %Y")}
 
 You wil be given a HTML documennt for a job application form.
 You need to fill out those part of forms which have text or radio as input. 

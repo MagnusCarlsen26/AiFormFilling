@@ -1,16 +1,19 @@
-import { readUserConfig } from "../dbService/readUserConfig";
+import { RESUME } from "./resume.js"
+import { COMMON_QUESTIONS } from "./commonQuestions.js"
+import { FAQ } from "./faq.js"
+import { COVER_LETTER } from "./coverLetter.js"
 
-export async function userInfo() {
-  const cfg = await readUserConfig();
+export const userInfo = `
 
-  return `
 # User's Resume - 
-${cfg.resumeTextarea}
+${RESUME}
+
+# Common Questions
+${COMMON_QUESTIONS}
 
 # User's FAQ
-${cfg.faqTextarea}
+${FAQ}
 
 # Cover Letter
-${cfg.coverLetterTextarea}
-`;
-}
+${COVER_LETTER}
+`
