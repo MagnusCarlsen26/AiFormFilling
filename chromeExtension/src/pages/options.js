@@ -1,18 +1,11 @@
+import { validateGeminiKey } from "../apiService/validateGeminiKey.js";
+import { readUserConfig } from "../dbService/readUserConfig.js";
+import { updateUserConfig } from "../dbService/updateUserConfig.js";
+
 const $ = (id) => document.getElementById(id);
 const msg = $("msg");
-import { validateGeminiKey } from "../apiService/validateGeminiKey.js";
 const apiKeyValidationMsg = $("apiKeyValidationMsg");
 const persistentApiKeyValidationMsg = $("persistentApiKeyValidationMsg");
-
-const DEFAULTS = {
-  apiKey: "",
-  enableTextAutofill: true,
-  enableChoiceAutofill: true,
-  resumeTextarea: "",
-  coverLetterTextarea: "",
-  faqTextarea: "",
-  isApiKeyValid: false,
-};
 
 function showMsg(text) {
   msg.textContent = text;
@@ -20,8 +13,9 @@ function showMsg(text) {
 }
 
 async function load() {
-  const stored = await chrome.storage.sync.get(Object.keys(DEFAULTS));
-  const cfg = { ...DEFAULTS, ...stored };
+
+  const cfg = await readUserConfig();
+
   $("apiKey").value = cfg.apiKey;
   $("enableTextAutofill").checked = cfg.enableTextAutofill;
   $("enableChoiceAutofill").checked = cfg.enableChoiceAutofill;
@@ -29,21 +23,12 @@ async function load() {
   $("coverLetterTextarea").value = cfg.coverLetterTextarea;
   $("faqTextarea").value = cfg.faqTextarea;
 
-  // Display persistent API key validation message on load
-  if (cfg.apiKey && cfg.isApiKeyValid) {
-    persistentApiKeyValidationMsg.textContent = "API Key is valid (from last check).";
-    persistentApiKeyValidationMsg.style.color = "#98c379";
-  } else if (cfg.apiKey && !cfg.isApiKeyValid) {
-    persistentApiKeyValidationMsg.textContent = "API Key is invalid (from last check).";
-    persistentApiKeyValidationMsg.style.color = "#e06c75";
-  } else {
-    persistentApiKeyValidationMsg.textContent = "";
-  }
+  updatePersistentValidationMsg(cfg.apiKey, cfg.isApiKeyValid);
 }
 
 async function save() {
   const apiKey = $("apiKey").value.trim();
-  let isApiKeyValid = DEFAULTS.isApiKeyValid;
+  let isApiKeyValid = false
 
   if (apiKey) {
     const result = await validateGeminiKey(apiKey);
@@ -59,20 +44,11 @@ async function save() {
     faqTextarea: $("faqTextarea").value.trim(),
     isApiKeyValid: isApiKeyValid,
   };
-  await chrome.storage.sync.set(cfg);
+  await updateUserConfig(cfg);
   chrome.runtime.sendMessage({ type: "config-updated", payload: cfg });
   showMsg("Saved");
 
-  // Update persistent message after saving and validating
-  if (cfg.apiKey && cfg.isApiKeyValid) {
-    persistentApiKeyValidationMsg.textContent = "API Key is valid (from last check).";
-    persistentApiKeyValidationMsg.style.color = "#98c379";
-  } else if (cfg.apiKey && !cfg.isApiKeyValid) {
-    persistentApiKeyValidationMsg.textContent = "API Key is invalid (from last check).";
-    persistentApiKeyValidationMsg.style.color = "#e06c75";
-  } else {
-    persistentApiKeyValidationMsg.textContent = "";
-  }
+  updatePersistentValidationMsg(cfg.apiKey, cfg.isApiKeyValid);
 }
 
 async function validateKey() {
@@ -103,3 +79,15 @@ $("save").addEventListener("click", save);
 $("validateApiKey").addEventListener("click", validateKey);
 
 load();
+
+function updatePersistentValidationMsg(apiKey, isApiKeyValid) {
+  if (apiKey && isApiKeyValid) {
+    persistentApiKeyValidationMsg.textContent = "API Key is valid (from last check).";
+    persistentApiKeyValidationMsg.style.color = "#98c379";
+  } else if (apiKey && !isApiKeyValid) {
+    persistentApiKeyValidationMsg.textContent = "API Key is invalid (from last check).";
+    persistentApiKeyValidationMsg.style.color = "#e06c75";
+  } else {
+    persistentApiKeyValidationMsg.textContent = "";
+  }
+}
