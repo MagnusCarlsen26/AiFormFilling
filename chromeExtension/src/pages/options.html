@@ -45,6 +45,12 @@
         box-sizing: border-box;
       }
 
+      .unsaved-indicator {
+        color: #e6db74; /* A yellowish color for the asterisk */
+        margin-left: 5px;
+        visibility: hidden; /* Hidden by default */
+      }
+
       h1 {
         color: #61afef; /* Highlight color for headings */
         margin-bottom: 25px;
@@ -196,7 +202,9 @@
       <div class="content-constrained">
         <div class="api-key-and-autofill-grid">
           <div>
-            <h1>Gemini API key :</h1>
+            <h1>
+              Gemini API key : <span id="apiKeyUnsavedIndicator" class="unsaved-indicator">*</span>
+            </h1>
             <div class="row">
               <input id="apiKey" type="text" placeholder="Enter API key" />
               <button id="validateApiKey" style="margin-top: 10px;">Validate API Key</button>
@@ -210,6 +218,7 @@
               <label class="checkbox-label">
                 <input id="enableTextAutofill" type="checkbox" />
                 Enable Text Autofill
+                <span id="enableTextAutofillUnsavedIndicator" class="unsaved-indicator">*</span>
               </label>
             </div>
 
@@ -224,6 +233,7 @@
               <label class="checkbox-label">
                 <input id="enableChoiceAutofill" type="checkbox" />
                 Enable Choice Autofill
+                <span id="enableChoiceAutofillUnsavedIndicator" class="unsaved-indicator">*</span>
               </label>
             </div>
 
@@ -242,18 +252,24 @@
         <div class="content-full-width">
           <div class="three-column-grid">
             <div class="row">
-              <label for="resumeTextarea">Resume</label>
+              <label for="resumeTextarea">
+                Resume <span id="resumeTextareaUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
               <!-- TODO: Add recommended format for resume here -->
               <textarea id="resumeTextarea" rows="10"></textarea>
             </div>
 
             <div class="row">
-              <label for="coverLetterTextarea">Cover Letter</label>
+              <label for="coverLetterTextarea">
+                Cover Letter <span id="coverLetterTextareaUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
               <textarea id="coverLetterTextarea" rows="10"></textarea>
             </div>
 
             <div class="row">
-              <label for="faqTextarea">FAQ</label>
+              <label for="faqTextarea">
+                FAQ <span id="faqTextareaUnsavedIndicator" class="unsaved-indicator">*</span>
+              </label>
               <textarea id="faqTextarea" rows="10"></textarea>
             </div>
           </div>

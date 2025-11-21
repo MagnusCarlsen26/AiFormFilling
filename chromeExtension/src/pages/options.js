@@ -7,9 +7,24 @@ const msg = $("msg");
 const apiKeyValidationMsg = $("apiKeyValidationMsg");
 const persistentApiKeyValidationMsg = $("persistentApiKeyValidationMsg");
 
+let fieldStates = {};
+
 function showMsg(text) {
   msg.textContent = text;
   setTimeout(() => (msg.textContent = ""), 2000);
+}
+
+function markFieldAsChanged(fieldId, isChanged) {
+  const indicator = $(`${fieldId}UnsavedIndicator`);
+  if (indicator) {
+    indicator.style.visibility = isChanged ? "visible" : "hidden";
+  }
+}
+
+function hideAllUnsavedIndicators() {
+  for (const fieldId in fieldStates) {
+    markFieldAsChanged(fieldId, false);
+  }
 }
 
 async function load() {
@@ -23,7 +38,21 @@ async function load() {
   $("coverLetterTextarea").value = cfg.coverLetterTextarea;
   $("faqTextarea").value = cfg.faqTextarea;
 
+  fieldStates = {
+    apiKey: cfg.apiKey,
+    enableTextAutofill: cfg.enableTextAutofill,
+    enableChoiceAutofill: cfg.enableChoiceAutofill,
+    resumeTextarea: cfg.resumeTextarea,
+    coverLetterTextarea: cfg.coverLetterTextarea,
+    faqTextarea: cfg.faqTextarea,
+  };
+
   updatePersistentValidationMsg(cfg.apiKey, cfg.isApiKeyValid);
+  hideAllUnsavedIndicators();
+}
+
+function isFieldChanged(fieldId, currentValue) {
+  return fieldStates[fieldId] !== currentValue;
 }
 
 async function save() {
@@ -47,6 +76,9 @@ async function save() {
   await updateUserConfig(cfg);
   chrome.runtime.sendMessage({ type: "config-updated", payload: cfg });
   showMsg("Saved");
+
+  fieldStates = { ...cfg };
+  hideAllUnsavedIndicators();
 
   updatePersistentValidationMsg(cfg.apiKey, cfg.isApiKeyValid);
 }
@@ -77,6 +109,26 @@ async function validateKey() {
 
 $("save").addEventListener("click", save);
 $("validateApiKey").addEventListener("click", validateKey);
+
+// Add event listeners for input changes to show unsaved changes indicator
+$("apiKey").addEventListener("input", () =>
+  markFieldAsChanged("apiKey", isFieldChanged("apiKey", $("apiKey").value.trim()))
+);
+$("enableTextAutofill").addEventListener("change", () =>
+  markFieldAsChanged("enableTextAutofill", isFieldChanged("enableTextAutofill", $("enableTextAutofill").checked))
+);
+$("enableChoiceAutofill").addEventListener("change", () =>
+  markFieldAsChanged("enableChoiceAutofill", isFieldChanged("enableChoiceAutofill", $("enableChoiceAutofill").checked))
+);
+$("resumeTextarea").addEventListener("input", () =>
+  markFieldAsChanged("resumeTextarea", isFieldChanged("resumeTextarea", $("resumeTextarea").value.trim()))
+);
+$("coverLetterTextarea").addEventListener("input", () =>
+  markFieldAsChanged("coverLetterTextarea", isFieldChanged("coverLetterTextarea", $("coverLetterTextarea").value.trim()))
+);
+$("faqTextarea").addEventListener("input", () =>
+  markFieldAsChanged("faqTextarea", isFieldChanged("faqTextarea", $("faqTextarea").value.trim()))
+);
 
 load();
 
