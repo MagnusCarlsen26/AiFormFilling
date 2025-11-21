@@ -8,7 +8,6 @@ from utils.parseGeminiCode import parseGeminiJSON
 from utils.logData import logData
 from constants.systemPrompt import SYSTEM_PROMPT
 import google.generativeai as genai
-from requests.exceptions import RequestException
 
 app = Flask(__name__)
 CORS(app)
@@ -23,11 +22,12 @@ def getFormHTML():
     url = payload.get("url")
     form_html = formatHTML(payload.get("formHTML"))
     userInfo = payload.get("userInfo")
+    geminiApiKey = payload.get("geminiApiKey ")
 
     geminiResponse = send_gemini_message(
+        apiKey=geminiApiKey,
         message=f"userInfo: {userInfo} \n {form_html}",
         sys_prompt=SYSTEM_PROMPT,
-        history=[],
         model='gemini-2.5-flash'
     )
 
