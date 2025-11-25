@@ -32,11 +32,11 @@ def getFormHTML():
         model='gemini-2.5-flash'
     )
 
-    htmlFileName = saveHTML(
-        "./logs/lastPage.html",
-        formatted_html=form_html
-    )
-    logData(url, geminiResponse, form_html, htmlFileName)
+    # htmlFileName = saveHTML(
+    #     "./logs/lastPage.html",
+    #     formatted_html=form_html
+    # )
+    # logData(url, geminiResponse, form_html, htmlFileName)
 
     return parseGeminiJSON(
         geminiResponse[0],
