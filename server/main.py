@@ -23,7 +23,7 @@ def getFormHTML():
     url = payload.get("url")
     form_html = formatHTML(payload.get("formHTML"))
     userInfo = payload.get("userInfo")
-    geminiApiKey = payload.get("geminiApiKey ")
+    geminiApiKey = payload.get("geminiApiKey")
 
     geminiResponse = send_gemini_message(
         apiKey=geminiApiKey,
