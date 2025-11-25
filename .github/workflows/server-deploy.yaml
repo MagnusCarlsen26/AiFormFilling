@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - stage
+    paths:
+      - 'server/**'
 
 jobs:
   deploy:
