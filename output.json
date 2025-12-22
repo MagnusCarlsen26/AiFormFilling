@@ -1,0 +1,149 @@
+{
+  "status_code": "RB200",
+  "message": "success",
+  "data": {
+    "_id": "69267ce9e4621ec1c4db8703",
+    "achievements": {
+      "certifications": [],
+      "languages": [
+        {
+          "level": "Fluent",
+          "name": "English"
+        },
+        {
+          "level": "Advanced",
+          "name": "Hindi"
+        }
+      ],
+      "projects": [
+        {
+          "description": "Scraped data of 6600 doctors in 2 hours. From Practo for research purposes.\nImplemented a master-worker architecture to accomplish the task.\nDeployed the master using Firebase Functions and the worker using Docker containers on AWS Elastic Kubernetes Service\n(EKS).\nAddressed challenges related to efficiency, code reusability, and race conditions in Firestore.",
+          "from": "01 Dec 2024",
+          "institution": "IIT Jodhpur",
+          "name": "PRACTO SCRAPER",
+          "to": "31 Dec 2024"
+        }
+      ],
+      "websites": [
+        {
+          "url": "https://khushalsindhav.com/about"
+        },
+        {
+          "url": "http://github.com/MagnusCarlsen26/"
+        },
+        {
+          "url": "https://www.linkedin.com/in/khushal-sindhav-109602229/"
+        }
+      ]
+    },
+    "active": false,
+    "ats_analysis": {
+      "ats_score": 75,
+      "brevity_score": 81,
+      "impact_score": 68,
+      "section_analysis": 72,
+      "style_score": 74
+    },
+    "ats_score": 75,
+    "company_logo": "https://kod-placements.s3.ap-south-1.amazonaws.com/OneFin.jpg",
+    "company_name": "OneFin",
+    "created_at": 1764130025530,
+    "created_by": "KHUSHAL SINDHAV",
+    "education": {
+      "academic_gap": "0",
+      "active_backlogs": "0",
+      "college_name": "Indian Institute Of Technology, Jodhpur",
+      "graduation_branch": "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+      "graduation_cgpa": 8,
+      "graduation_course": "Bachelor of Technology (B.T./B.Tech.)",
+      "graduation_percentage": 80,
+      "graduation_year_passout": "2025",
+      "post_graduation_active_backlogs": "",
+      "post_graduation_branch": "",
+      "post_graduation_cgpa": 0,
+      "post_graduation_college_name": "",
+      "post_graduation_course": "",
+      "post_graduation_percentage": 0,
+      "post_graduation_year_passout": "",
+      "puc_percentage": 93,
+      "puc_school_name": "J H AMBANI SARASWATI VIDYA MANDIR SURAT GUJARAT",
+      "puc_year_passout": "2021",
+      "sslc_percentage": 91,
+      "sslc_school_name": "J H AMBANI SARASWATI VIDYA MANDIR SURAT GUJARAT",
+      "sslc_year_passout": "2019",
+      "usn_id": "B21AI039",
+      "work_experience": "",
+      "working_professional": false
+    },
+    "experience": [],
+    "header": {
+      "contactNumber": "9328576258",
+      "currentCity": "Bengaluru (Bangalore) Urban",
+      "emailId": "khushal.sindhav26@gmail.com",
+      "fullName": "KHUSHAL SINDHAV",
+      "githubUrl": "https://github.com/MagnusCarlsen26",
+      "linkedinUrl": "https://www.linkedin.com/in/khushal-sindhav-109602229/",
+      "nativeState": "Karnataka",
+      "resumeTitle": "Software Development Engineer ( SDE-1 )"
+    },
+    "image": "",
+    "image_url": "https://production-resume-builder.s3.ap-south-1.amazonaws.com/resumes/28583445-945c-4f68-96a0-e40a7551f139/image.png",
+    "is_complete": false,
+    "last_stage": "experience",
+    "name": "KHUSHAL SINDHAV",
+    "placement_id": "3edab1db-abca-413a-a50f-a859b296d316",
+    "position": "Software Engineer",
+    "progress": 50,
+    "resume": "PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KCjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04IiAvPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIiAvPgogIDx0aXRsZT5LSFVTSEFMIFNJTkRIQVYgLSBSZXN1bWU8L3RpdGxlPgogIDxzdHlsZT4KICAgIEBpbXBvcnQgdXJsKCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PVNwZWN0cmFsOml0YWwsd2dodEAwLDQwMDswLDcwMDsxLDQwMCZkaXNwbGF5PXN3YXAiKTsKCiAgICAqIHsKICAgICAgbWFyZ2luOiAwOwogICAgICBwYWRkaW5nOiAwOwogICAgICBib3gtc2l6aW5nOiBib3JkZXItYm94OwogICAgfQoKICAgIGJvZHkgewogICAgICBmb250LWZhbWlseTogIlNwZWN0cmFsIiwgc2VyaWY7CiAgICAgIGxpbmUtaGVpZ2h0OiAxLjQ7CiAgICAgIGNvbG9yOiAjMDAwOwogICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOwogICAgfQoKICAgIEBwYWdlIHsKICAgICAgc2l6ZTogOC41aW4gMTFpbjsKICAgICAgbWFyZ2luOiAwLjZpbjsKICAgIH0KCiAgICAucmVzdW1lLWNvbnRhaW5lciB7CiAgICAgIC8qIG1heC13aWR0aDogOC41aW47ICovCiAgICAgIHBhZGRpbmc6IDAuNmluOwogICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOwogICAgfQoKICAgIC8qIEhlYWRlciBTdHlsZXMgKi8KICAgIC5oZWFkZXIgewogICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgIG1hcmdpbi1ib3R0b206IDIwcHQ7CiAgICB9CgogICAgLm5hbWUgewogICAgICBmb250LXNpemU6IDEuNzVyZW07CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIG1hcmdpbi1ib3R0b206IDRwdDsKICAgIH0KCiAgICAuZGVzaWduYXRpb24gewogICAgICBmb250LXNpemU6IDE1cHQ7CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIG1hcmdpbi1ib3R0b206IDhwdDsKICAgIH0KCiAgICAuY29udGFjdC1pbmZvIHsKICAgICAgZm9udC1zaXplOiAxMHB0OwogICAgICBjb2xvcjogIzAwMDsKICAgIH0KCiAgICAvKiBTZWN0aW9uIFN0eWxlcyAqLwogICAgLnNlY3Rpb24gewogICAgICBtYXJnaW4tYm90dG9tOiAxNnB0OwogICAgfQoKICAgIC5zZWN0aW9uLXRpdGxlIHsKICAgICAgZm9udC1zaXplOiAxMXB0OwogICAgICBmb250LXdlaWdodDogNzAwOwogICAgICBib3JkZXItYm90dG9tOiAwLjhwdCBzb2xpZCAjMDAwOwogICAgICBwYWRkaW5nLWJvdHRvbTogMXB0OwogICAgICBtYXJnaW4tYm90dG9tOiA4cHQ7CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CgogICAgLnNlY3Rpb24tY29udGVudCB7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgICAgbGluZS1oZWlnaHQ6IDEuMjsKICAgIH0KCiAgICAvKiBFeHBlcmllbmNlIFN0eWxlcyAqLwogICAgLmV4cGVyaWVuY2UtaXRlbSB7CiAgICAgIG1hcmdpbi1ib3R0b206IDEycHQ7CiAgICB9CgogICAgLmV4cGVyaWVuY2UtaGVhZGVyIHsKICAgICAgZGlzcGxheTogZmxleDsKICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgICBtYXJnaW4tYm90dG9tOiAycHQ7CiAgICB9CgogICAgLmNvbXBhbnktbG9jYXRpb24gewogICAgICBmb250LXdlaWdodDogNzAwOwogICAgICBmb250LXNpemU6IDEwcHQ7CiAgICB9CgogICAgLnBvc2l0aW9uLWRhdGVzIHsKICAgICAgZGlzcGxheTogZmxleDsKICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgICBtYXJnaW4tYm90dG9tOiA0cHQ7CiAgICB9CgogICAgLnBvc2l0aW9uIHsKICAgICAgZm9udC13ZWlnaHQ6IDcwMDsKICAgICAgZm9udC1zaXplOiAxMHB0OwogICAgfQoKICAgIC5kYXRlcyB7CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgIH0KCiAgICAuZGVzY3JpcHRpb24gewogICAgICBtYXJnaW4tbGVmdDogMThwdDsKICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgfQoKICAgIC5kZXNjcmlwdGlvbjpiZWZvcmUgewogICAgICBjb250ZW50OiAi4oCiIjsKICAgICAgcG9zaXRpb246IGFic29sdXRlOwogICAgICBsZWZ0OiAtMTJwdDsKICAgIH0KCiAgICAvKiBFZHVjYXRpb24gU3R5bGVzICovCiAgICAuZWR1Y2F0aW9uLWl0ZW0gewogICAgICBtYXJnaW4tYm90dG9tOiA4cHQ7CiAgICB9CgogICAgLmVkdWNhdGlvbi1pdGVtIGg0IHsKICAgICAgZm9udC1zaXplOiAxMHB0OwogICAgICBmb250LXdlaWdodDogNzAwOwogICAgICBtYXJnaW4tYm90dG9tOiAycHQ7CiAgICB9CgogICAgLmVkdWNhdGlvbi1kZXRhaWxzIHsKICAgICAgZm9udC1zaXplOiAxMHB0OwogICAgICBtYXJnaW4tYm90dG9tOiAycHQ7CiAgICB9CgogICAgLmVkdWNhdGlvbi1tZXRhIHsKICAgICAgZm9udC1zaXplOiAxMHB0OwogICAgICBjb2xvcjogIzY2NjsKICAgIH0KCiAgICAvKiBTa2lsbHMgU3R5bGVzICovCiAgICAuc2tpbGxzLWNvbnRhaW5lciB7CiAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgIGZsZXgtd3JhcDogd3JhcDsKICAgICAgZ2FwOiA4cHQ7CiAgICB9CgogICAgLnNraWxsLXRhZyB7CiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjA7CiAgICAgIHBhZGRpbmc6IDRwdCA4cHQ7CiAgICAgIGJvcmRlci1yYWRpdXM6IDRwdDsKICAgICAgZm9udC1zaXplOiA5cHQ7CiAgICAgIGJvcmRlcjogMXB0IHNvbGlkICNkZGQ7CiAgICB9CgogICAgLyogTGlzdCBTdHlsZXMgKi8KICAgIC5jdXN0b20tbGlzdCB7CiAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7CiAgICAgIG1hcmdpbi1sZWZ0OiAxOHB0OwogICAgfQoKICAgIC5jdXN0b20tbGlzdCBsaSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgICAgbWFyZ2luLWJvdHRvbTogNHB0OwogICAgfQoKICAgIC5jdXN0b20tbGlzdCBsaTpiZWZvcmUgewogICAgICBjb250ZW50OiAi4oCiIjsKICAgICAgcG9zaXRpb246IGFic29sdXRlOwogICAgICBsZWZ0OiAtMTJwdDsKICAgIH0KCiAgICAvKiBQcm9qZWN0IFN0eWxlcyAqLwogICAgLnByb2plY3QtaXRlbSB7CiAgICAgIG1hcmdpbi1ib3R0b206IDEycHQ7CiAgICB9CgogICAgLnByb2plY3QtaGVhZGVyIHsKICAgICAgZGlzcGxheTogZmxleDsKICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgICBtYXJnaW4tYm90dG9tOiAycHQ7CiAgICB9CgogICAgLnByb2plY3QtbmFtZSB7CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgIH0KCiAgICAucHJvamVjdC1kYXRlcyB7CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgIH0KCiAgICAucHJvamVjdC1pbnN0aXR1dGlvbiB7CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgICAgbWFyZ2luLWJvdHRvbTogNHB0OwogICAgfQoKICAgIC8qIENlcnRpZmljYXRpb24gU3R5bGVzICovCiAgICAuY2VydGlmaWNhdGlvbi1pdGVtIHsKICAgICAgbWFyZ2luLWJvdHRvbTogOHB0OwogICAgfQoKICAgIC5jZXJ0LWhlYWRlciB7CiAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsKICAgICAgbWFyZ2luLWJvdHRvbTogMnB0OwogICAgfQoKICAgIC5jZXJ0LW5hbWUgewogICAgICBmb250LXdlaWdodDogNzAwOwogICAgICBmb250LXNpemU6IDEwcHQ7CiAgICB9CgogICAgLmNlcnQtZGF0ZSB7CiAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgIH0KCiAgICAuY2VydC1pbnN0aXR1dGlvbiB7CiAgICAgIGZvbnQtc2l6ZTogMTBwdDsKICAgIH0KCiAgICAvKiBVdGlsaXR5IENsYXNzZXMgKi8KICAgIC5zcGFjZXIgewogICAgICBoZWlnaHQ6IDhwdDsKICAgIH0KCiAgICAuc21hbGwtc3BhY2VyIHsKICAgICAgaGVpZ2h0OiA0cHQ7CiAgICB9CiAgPC9zdHlsZT4KPC9oZWFkPgoKPGJvZHk+CiAgPGRpdiBjbGFzcz0icmVzdW1lLWNvbnRhaW5lciI+CiAgICA8IS0tIEhlYWRlciBTZWN0aW9uIC0tPgogICAgPGRpdiBjbGFzcz0iaGVhZGVyIj4KICAgICAgPGRpdiBjbGFzcz0ibmFtZSI+S0hVU0hBTCBTSU5ESEFWPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9ImRlc2lnbmF0aW9uIj48L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iY29udGFjdC1pbmZvIj4KICAgICAgICBCZW5nYWx1cnUgKEJhbmdhbG9yZSkgVXJiYW4g4oCiIGtodXNoYWwuc2luZGhhdjI2QGdtYWlsLmNvbSDigKIgOTMyODU3NjI1OAogICAgICA8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDwhLS0gU3VtbWFyeSBTZWN0aW9uIC0tPgogICAgPGRpdiBjbGFzcz0ic2VjdGlvbiI+CiAgICAgIDxkaXYgY2xhc3M9InNlY3Rpb24tdGl0bGUiPlN1bW1hcnk8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ic2VjdGlvbi1jb250ZW50Ij5IYXJkd29ya2luZyBlbXBsb3llZSB3aXRoIGN1c3RvbWVyIHNlcnZpY2UsIG11bHRpdGFza2luZywgYW5kIHRpbWUgbWFuYWdlbWVudCBhYmlsaXRpZXMuIERldm90ZWQgdG8gZ2l2aW5nIGV2ZXJ5IGN1c3RvbWVyIGEgcG9zaXRpdmUgYW5kIG1lbW9yYWJsZSBleHBlcmllbmNlLjwvZGl2PgogICAgPC9kaXY+CgogICAgPCEtLSBQcm9mZXNzaW9uYWwgRXhwZXJpZW5jZSBTZWN0aW9uIC0tPgogICAgPGRpdiBjbGFzcz0ic2VjdGlvbiI+CiAgICAgIDxkaXYgY2xhc3M9InNlY3Rpb24tdGl0bGUiPlByb2Zlc3Npb25hbCBFeHBlcmllbmNlPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9InNlY3Rpb24tY29udGVudCI+CiAgICAgICAgPGRpdiBjbGFzcz0iZXhwZXJpZW5jZS1pdGVtIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImV4cGVyaWVuY2UtaGVhZGVyIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImNvbXBhbnktbG9jYXRpb24iPk9hc2lzIG9mIElkZWFzIDwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImNvbXBhbnktbG9jYXRpb24iPlJlbW90ZTwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0icG9zaXRpb24tZGF0ZXMiPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0icG9zaXRpb24iPkZ1bGwgVGltZSBTb2Z0d2FyZSBFbmdpbmVlcjwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImRhdGVzIj4wMSBGZWIgMjAyNSAtIDE1IEp1bCAyMDI1PC9zcGFuPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJkZXNjcmlwdGlvbiI+U29sZWx5IGRlc2lnbmVkLCBpbXBsZW1lbnRlZCwgYW5kIG1haW50YWluZWQgYW4gZW5kLXRvLWVuZCBzeXN0ZW0gZm9yIHNjcmFwaW5nIGFuZCBwcm9jZXNzaW5nIHN0YXJ0dXAgaWRlYXMuClNjcmFwZWQgZGF0YSBmcm9tIG11bHRpcGxlIHdlYnNpdGVzIHVzaW5nIGFzeW5jaHJvbm91cyBQeXRob24gcHJvZ3JhbW1pbmcuICAgICAgICAgICAgICAgICAgICAgICAgICAgIApQcm9jZXNzZWQgc2NyYXBlZCBjb250ZW50IHZpYSBtdWx0aS1zdGFnZSBMTE0gcGlwZWxpbmVzIHBvd2VyZWQgYnkgT3BlbkFJLCBEZWVwU2VlaywgYW5kIEdlbWluaS4KRGVwbG95ZWQgYW5kIHNjYWxlZCB0aGUgc3lzdGVtIGFjcm9zcyA4IEFXUyBFQzIgaW5zdGFuY2VzOyB1c2VkIHRtdXggZm9yIGNvbmN1cnJlbnQgdGFzayBtYW5hZ2VtZW50LgpCdWlsdCBhIGZ1bGx5IGF1dG9tYXRlZCBwaXBlbGluZSBmb3IgaWRlYSBleHRyYWN0aW9uLCBmaWx0ZXJpbmcsIGFuZCBjdXJhdGlvbiB1c2luZyBMTE1zLjwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImV4cGVyaWVuY2UtaXRlbSI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJleHBlcmllbmNlLWhlYWRlciI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJjb21wYW55LWxvY2F0aW9uIj5JSVQgSm9kaHB1cjwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImNvbXBhbnktbG9jYXRpb24iPkpvZGhwdXI8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9InBvc2l0aW9uLWRhdGVzIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InBvc2l0aW9uIj5Tb2Z0d2FyZSBJbnRlcm48L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJkYXRlcyI+MDEgRGVjIDIwMjQgLSAzMCBBcHIgMjAyNTwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZGVzY3JpcHRpb24iPlNjcmFwZWQgZGF0YSBvZiA2NjAwIGRvY3RvcnMgaW4gMiBob3Vycy4gRnJvbSBQcmFjdG8gZm9yIHJlc2VhcmNoIHB1cnBvc2VzLgpJbXBsZW1lbnRlZCBhIG1hc3Rlci13b3JrZXIgYXJjaGl0ZWN0dXJlIHRvIGFjY29tcGxpc2ggdGhlIHRhc2suCkRlcGxveWVkIHRoZSBtYXN0ZXIgdXNpbmcgRmlyZWJhc2UgRnVuY3Rpb25zIGFuZCB0aGUgd29ya2VyIHVzaW5nIERvY2tlciBjb250YWluZXJzIG9uIEFXUyBFbGFzdGljIEt1YmVybmV0ZXMgU2VydmljZQooRUtTKS4KQWRkcmVzc2VkIGNoYWxsZW5nZXMgcmVsYXRlZCB0byBlZmZpY2llbmN5LCBjb2RlIHJldXNhYmlsaXR5LCBhbmQgcmFjZSBjb25kaXRpb25zIGluIEZpcmVzdG9yZS48L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8IS0tIFNlbGVjdGVkIFByb2plY3QgRXhwZXJpZW5jZSBTZWN0aW9uIC0tPgogICAgPGRpdiBjbGFzcz0ic2VjdGlvbiI+CiAgICAgIDxkaXYgY2xhc3M9InNlY3Rpb24tdGl0bGUiPlByb2plY3QgRXhwZXJpZW5jZTwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJzZWN0aW9uLWNvbnRlbnQiPgogICAgICAgIDx1bCBjbGFzcz0iY3VzdG9tLWxpc3QiPgogICAgICAgICAgPGxpPjxzdHJvbmc+UFJBQ1RPIFNDUkFQRVI8L3N0cm9uZz48L2xpPgogICAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tbGVmdDogMThwdCI+U2NyYXBlZCBkYXRhIG9mIDY2MDAgZG9jdG9ycyBpbiAyIGhvdXJzLiBGcm9tIFByYWN0byBmb3IgcmVzZWFyY2ggcHVycG9zZXMuCkltcGxlbWVudGVkIGEgbWFzdGVyLXdvcmtlciBhcmNoaXRlY3R1cmUgdG8gYWNjb21wbGlzaCB0aGUgdGFzay4KRGVwbG95ZWQgdGhlIG1hc3RlciB1c2luZyBGaXJlYmFzZSBGdW5jdGlvbnMgYW5kIHRoZSB3b3JrZXIgdXNpbmcgRG9ja2VyIGNvbnRhaW5lcnMgb24gQVdTIEVsYXN0aWMgS3ViZXJuZXRlcyBTZXJ2aWNlCihFS1MpLgpBZGRyZXNzZWQgY2hhbGxlbmdlcyByZWxhdGVkIHRvIGVmZmljaWVuY3ksIGNvZGUgcmV1c2FiaWxpdHksIGFuZCByYWNlIGNvbmRpdGlvbnMgaW4gRmlyZXN0b3JlLjwvbGk+CiAgICAgICAgPC91bD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8IS0tIEFjaGlldmVtZW50cyAmIENlcnRpZmljYXRpb25zIFNlY3Rpb24gLS0+CgogICAgPCEtLSBFZHVjYXRpb24gU2VjdGlvbiAtLT4KICAgIDxkaXYgY2xhc3M9InNlY3Rpb24iPgogICAgICA8ZGl2IGNsYXNzPSJzZWN0aW9uLXRpdGxlIj5FZHVjYXRpb248L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ic2VjdGlvbi1jb250ZW50Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJlZHVjYXRpb24taXRlbSI+CiAgICAgICAgICA8aDQ+MTB0aCBHcmFkZTwvaDQ+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJlZHVjYXRpb24tZGV0YWlscyI+CiAgICAgICAgICAgIEogSCBBTUJBTkkgU0FSQVNXQVRJIFZJRFlBIE1BTkRJUiBTVVJBVCBHVUpBUkFULCA5MSUKICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZWR1Y2F0aW9uLW1ldGEiPgogICAgICAgICAgICBZZWFyIG9mIFBhc3NvdXQ6IDIwMTkKICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJlZHVjYXRpb24taXRlbSI+CiAgICAgICAgICA8aDQ+MTJ0aCBHcmFkZTwvaDQ+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJlZHVjYXRpb24tZGV0YWlscyI+CiAgICAgICAgICAgIEogSCBBTUJBTkkgU0FSQVNXQVRJIFZJRFlBIE1BTkRJUiBTVVJBVCBHVUpBUkFULCA5MyUKICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZWR1Y2F0aW9uLW1ldGEiPgogICAgICAgICAgICBZZWFyIG9mIFBhc3NvdXQ6IDIwMjEKICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJlZHVjYXRpb24taXRlbSI+CiAgICAgICAgICA8aDQ+VW5kZXJncmFkdWF0ZTwvaDQ+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJlZHVjYXRpb24tZGV0YWlscyI+CiAgICAgICAgICAgIEluZGlhbiBJbnN0aXR1dGUgT2YgVGVjaG5vbG9neSwgSm9kaHB1ciwgQmFjaGVsb3Igb2YgVGVjaG5vbG9neSAoQi5ULiYjeDJGO0IuVGVjaC4pCiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImVkdWNhdGlvbi1tZXRhIj4KICAgICAgICAgICAgWWVhciBvZiBQYXNzb3V0OiAyMDI1LCBDR1BBOgogICAgICAgICAgICA4CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgIDwvZGl2PgogICAgPC9kaXY+CgogICAgPCEtLSBTa2lsbHMgU2VjdGlvbiAtLT4KICAgIDxkaXYgY2xhc3M9InNlY3Rpb24iPgogICAgICA8ZGl2IGNsYXNzPSJzZWN0aW9uLXRpdGxlIj5Ta2lsbHM8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ic2VjdGlvbi1jb250ZW50Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJza2lsbHMtY29udGFpbmVyIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJza2lsbC10YWciPlN5c3RlbSBEZXNpZ248L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0ic2tpbGwtdGFnIj5NRVJOPC9zcGFuPgogICAgICAgICAgPHNwYW4gY2xhc3M9InNraWxsLXRhZyI+UHl0aG9uPC9zcGFuPgogICAgICAgICAgPHNwYW4gY2xhc3M9InNraWxsLXRhZyI+QVdTPC9zcGFuPgogICAgICAgICAgPHNwYW4gY2xhc3M9InNraWxsLXRhZyI+RmlyZWJhc2U8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0ic2tpbGwtdGFnIj5Eb2NrZXI8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0ic2tpbGwtdGFnIj5LOHM8L3NwYW4+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CgogICAgPCEtLSBMYW5ndWFnZXMgU2VjdGlvbiAtLT4KICAgIDxkaXYgY2xhc3M9InNlY3Rpb24iPgogICAgICA8ZGl2IGNsYXNzPSJzZWN0aW9uLXRpdGxlIj5MYW5ndWFnZXM8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ic2VjdGlvbi1jb250ZW50Ij4KICAgICAgICA8dWwgY2xhc3M9ImN1c3RvbS1saXN0Ij4KICAgICAgICAgIDxsaT5FbmdsaXNoIChGbHVlbnQpPC9saT4KICAgICAgICAgIDxsaT5IaW5kaSAoQWR2YW5jZWQpPC9saT4KICAgICAgICA8L3VsPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDwhLS0gV2Vic2l0ZXMgJiBMaW5rcyBTZWN0aW9uIC0tPgogICAgPGRpdiBjbGFzcz0ic2VjdGlvbiI+CiAgICAgIDxkaXYgY2xhc3M9InNlY3Rpb24tdGl0bGUiPldlYnNpdGVzICYgTGlua3M8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ic2VjdGlvbi1jb250ZW50Ij4KICAgICAgICA8dWwgY2xhc3M9ImN1c3RvbS1saXN0Ij4KICAgICAgICAgIDxsaT48YSBocmVmPSJodHRwczomI3gyRjsmI3gyRjtraHVzaGFsc2luZGhhdi5jb20mI3gyRjthYm91dCI+aHR0cHM6JiN4MkY7JiN4MkY7a2h1c2hhbHNpbmRoYXYuY29tJiN4MkY7YWJvdXQ8L2E+PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSJodHRwOiYjeDJGOyYjeDJGO2dpdGh1Yi5jb20mI3gyRjtNYWdudXNDYXJsc2VuMjYmI3gyRjsiPmh0dHA6JiN4MkY7JiN4MkY7Z2l0aHViLmNvbSYjeDJGO01hZ251c0NhcmxzZW4yNiYjeDJGOzwvYT48L2xpPgogICAgICAgICAgPGxpPjxhIGhyZWY9Imh0dHBzOiYjeDJGOyYjeDJGO3d3dy5saW5rZWRpbi5jb20mI3gyRjtpbiYjeDJGO2todXNoYWwtc2luZGhhdi0xMDk2MDIyMjkmI3gyRjsiPmh0dHBzOiYjeDJGOyYjeDJGO3d3dy5saW5rZWRpbi5jb20mI3gyRjtpbiYjeDJGO2todXNoYWwtc2luZGhhdi0xMDk2MDIyMjkmI3gyRjs8L2E+PC9saT4KICAgICAgICA8L3VsPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvZGl2Pgo8L2JvZHk+Cgo8L2h0bWw+",
+    "resume_id": "28583445-945c-4f68-96a0-e40a7551f139",
+    "resume_url": "https://production-resume-builder.s3.ap-south-1.amazonaws.com/resumes/28583445-945c-4f68-96a0-e40a7551f139/resume.pdf",
+    "skills": [
+      {
+        "id": 0,
+        "name": "Python"
+      },
+      {
+        "id": 1,
+        "name": "Django"
+      },
+      {
+        "id": 2,
+        "name": "Backend Development"
+      },
+      {
+        "id": 3,
+        "name": "API Development"
+      },
+      {
+        "id": 4,
+        "name": "System Design"
+      },
+      {
+        "id": 5,
+        "name": "MERN Stack"
+      },
+      {
+        "id": 6,
+        "name": "AWS"
+      },
+      {
+        "id": 7,
+        "name": "Firebase"
+      },
+      {
+        "id": 8,
+        "name": "Docker"
+      },
+      {
+        "id": 9,
+        "name": "Kubernetes"
+      }
+    ],
+    "status": "activate",
+    "summary": "Hardworking employee with customer service, multitasking, and time management abilities. Devoted to giving every customer a positive and memorable experience.",
+    "template_id": "88f043c2-704d-4187-b1c9-3182f77446cc",
+    "type": "COMPANY_SPECIFIC",
+    "updated_at": 0,
+    "user_id": "d466e3e4-1f96-4802-b0cc-eaa5b01e928d"
+  }
+}

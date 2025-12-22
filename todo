@@ -1,0 +1,6 @@
+1. Customizing gemini model.
+2. Auto fill without pressing button.
+3. error logging and sending reports to client.
+4. error catching and showing to client
+6. collecting usage analytics on server.
+7. shift logging from server to client.
